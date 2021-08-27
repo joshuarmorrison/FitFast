@@ -1,0 +1,14 @@
+ #counter{
+    position: relative;
+    color: black;
+    font-family: 'Rampart One', cursive; 
+    color: black;
+}
+h2{
+    font-family: 'Rampart One', cursive;
+    color: black;
+}
+img{
+    max-height: 100%;
+    max-width: 100%;
+}
