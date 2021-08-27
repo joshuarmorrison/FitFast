@@ -1,19 +1,29 @@
-let calorie = 0
+let steps = 0
 let globalmultiplier = 0
 
 function mine(){
-calorie++;
-calorie += globalmultiplier 
+steps++;
+steps += globalmultiplier 
 draw()
 }
 function draw(){
-    document.getElementById("counter").innerText=calorie.toString()
+    document.getElementById("counter").innerText=steps.toString()
 }
 
-function drawinventory(){
-
+function drawInventory(){
+//NOTE for in loop, document
+document.getElementById("chicken").innerText=clickUpgrades.chicken.quantity.toString()
 }
-
+function buyChicken(){
+    if(steps <50){
+        return ("Not enough steps")
+    }
+    clickUpgrades.chicken.quantity++
+    steps -= clickUpgrades.chicken.price
+    globalmultiplier += clickUpgrades.chicken.multiplier
+    draw()
+    drawInventory()
+}
 
 let clickUpgrades = {
     chicken: {
@@ -26,6 +36,11 @@ let clickUpgrades = {
         quantity: 0,
         multiplier: 1.25
     },
+   
+    }
+
+  
+  let automaticUpgrades = {
     proteinshake: {
         price: 400,
         quantity: 0,
@@ -35,18 +50,11 @@ let clickUpgrades = {
         price: 800,
         quantity: 0,
         multiplier: 2.25
-    }
-  };
-  
-  let automaticUpgrades = {
-    fatburner: {
-      price: 500,
-      quantity: 0,
-      multiplier: 25
-    },
-    superburn: {
-        price: 1000,
-        quantity: 0,
-        multiplier: 50
-    }
-  };
+  }
+  }
+  function collectAutomaticUpgrades(){
+      let shake = automaticUpgrades.proteinshake
+      steps += (shake.quantity*shake.multiplier)
+
+  }
+  setInterval( collectAutomaticUpgrades, 3000);
