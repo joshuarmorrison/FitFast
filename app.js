@@ -75,12 +75,12 @@ let clickUpgrades = {
   
   let automaticUpgrades = {
     proteinshake: {
-        price: 200,
+        price: 125,
         quantity: 0,
-        multiplier: 15
+        multiplier: 10
     },
     steak: {
-        price: 1500,
+        price: 750,
         quantity: 0,
         multiplier: 30
   }
