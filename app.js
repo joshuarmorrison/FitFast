@@ -90,7 +90,8 @@ let clickUpgrades = {
       steps += (shake.quantity*shake.multiplier)
       let steak= automaticUpgrades.steak
       steps += (steak.quantity*steak.multiplier)
-      
+      draw()
   }
   setInterval( collectAutomaticUpgrades, 3000);
+  
   
