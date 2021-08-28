@@ -19,7 +19,7 @@ document.getElementById("steak").innerText=automaticUpgrades.steak.quantity.toSt
 }
 function buyChicken(){
     if(steps <50){
-        return ("Take More Steps")
+        return ("NO")
     }
     clickUpgrades.chicken.quantity++
     steps -= clickUpgrades.chicken.price
@@ -28,8 +28,8 @@ function buyChicken(){
     drawInventory()
 }
 function buySalmon(){
-    if(steps <100){
-        return ("Take More Steps")
+    if(steps <150){
+        return ("NO")
     }
     clickUpgrades.salmon.quantity++
     steps-=clickUpgrades.salmon.price
@@ -39,7 +39,7 @@ function buySalmon(){
 }
 function buyProtein(){
     if(steps <400){
-        return ("Not enough steps")
+        return ("NO")
     }
     automaticUpgrades.proteinshake.quantity++
     steps-=automaticUpgrades.proteinshake.price
@@ -49,7 +49,7 @@ function buyProtein(){
 }
 function buySteak(){
     if(steps <2500){
-        return ("Take More Steps")
+        return ("NO")
     }
     automaticUpgrades.steak.quantity++
     steps-=automaticUpgrades.steak.price
@@ -65,7 +65,7 @@ let clickUpgrades = {
       multiplier: 5
     },
     salmon: {
-        price: 100,
+        price: 150,
         quantity: 0,
         multiplier: 8
     },
