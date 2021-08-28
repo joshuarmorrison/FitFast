@@ -30,30 +30,30 @@ function buyChicken(){
 function buySalmon(){
     if(steps >= clickUpgrades.salmon.price){
         clickUpgrades.salmon.quantity++
-    steps-=clickUpgrades.salmon.price
+    steps-=Math.floor(clickUpgrades.salmon.price)
     globalmultiplier += clickUpgrades.salmon.multiplier
     }
-     clickUpgrades.salmon.price *= 2
+     Math.floor(clickUpgrades.salmon.price *= 1.25)
     draw()
     drawInventory()
 }
 function buyProtein(){
     if(steps >= automaticUpgrades.proteinshake.price){
         automaticUpgrades.proteinshake.quantity++
-    steps-=automaticUpgrades.proteinshake.price
+    steps-=Math.floor(automaticUpgrades.proteinshake.price)
     globalmultiplier += automaticUpgrades.proteinshake.multiplier
     }
-     automaticUpgrades.proteinshake.price *= 2
+     Math.floor(automaticUpgrades.proteinshake.price *= 1.25)
     draw()
     drawInventory()
 }
 function buySteak(){
     if(steps >= automaticUpgrades.steak.price){
         automaticUpgrades.steak.quantity++
-    steps-=automaticUpgrades.steak.price
+    steps-=Math.floor(automaticUpgrades.steak.price)
     globalmultiplier += automaticUpgrades.steak.multiplier
     }
-    automaticUpgrades.steak.price *= 3
+    Math.floor(automaticUpgrades.steak.price *= 1.5)
     draw()
     drawInventory()
 }
@@ -80,7 +80,7 @@ let clickUpgrades = {
         multiplier: 10
     },
     steak: {
-        price: 750,
+        price: 300,
         quantity: 0,
         multiplier: 30
   }
