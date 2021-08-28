@@ -18,42 +18,42 @@ document.getElementById("protein").innerText=automaticUpgrades.proteinshake.quan
 document.getElementById("steak").innerText=automaticUpgrades.steak.quantity.toString()
 }
 function buyChicken(){
-    if(steps <50){
-        return ("NO")
-    }
-    clickUpgrades.chicken.quantity++
+    if(steps >= 50){
+        clickUpgrades.chicken.quantity++
     steps -= clickUpgrades.chicken.price
     globalmultiplier += clickUpgrades.chicken.multiplier
+    }
+    //clickUpgrades.chicken.price *= 2
     draw()
     drawInventory()
 }
 function buySalmon(){
-    if(steps <150){
-        return ("NO")
-    }
-    clickUpgrades.salmon.quantity++
+    if(steps >= 150){
+        clickUpgrades.salmon.quantity++
     steps-=clickUpgrades.salmon.price
     globalmultiplier += clickUpgrades.salmon.multiplier
+    }
+    // clickUpgrades.salmon.price *= 4
     draw()
     drawInventory()
 }
 function buyProtein(){
-    if(steps <400){
-        return ("NO")
-    }
-    automaticUpgrades.proteinshake.quantity++
+    if(steps >= 400){
+        automaticUpgrades.proteinshake.quantity++
     steps-=automaticUpgrades.proteinshake.price
     globalmultiplier += automaticUpgrades.proteinshake.multiplier
+    }
+    // automaticUpgrades.proteinshake.price *= 8
     draw()
     drawInventory()
 }
 function buySteak(){
-    if(steps <2500){
-        return ("NO")
-    }
-    automaticUpgrades.steak.quantity++
+    if(steps >= 2500){
+        automaticUpgrades.steak.quantity++
     steps-=automaticUpgrades.steak.price
     globalmultiplier += automaticUpgrades.steak.multiplier
+    }
+    //automaticUpgrades.steak.price *= 12
     draw()
     drawInventory()
 }
@@ -90,6 +90,7 @@ let clickUpgrades = {
       steps += (shake.quantity*shake.multiplier)
       let steak= automaticUpgrades.steak
       steps += (steak.quantity*steak.multiplier)
+      
   }
   setInterval( collectAutomaticUpgrades, 3000);
   
