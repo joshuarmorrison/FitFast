@@ -1,4 +1,4 @@
- #counter{
+#counter{
     position: relative;
     color: black;
     font-family: 'Rampart One', cursive; 
@@ -6,9 +6,32 @@
 }
 h2{
     font-family: 'Rampart One', cursive;
-    color: black;
+    color: black ;
 }
 img{
     max-height: 100%;
     max-width: 100%;
+}
+.inventory{
+    background-color: rgba(9, 130, 182, 0.92);
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 12pt;
+    
+}
+.health{
+    background-color: rgba(27, 153, 191, 0.92);
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 12pt;
+}
+h1{
+    font-family: 'Rampart One', cursive;
+    color: black;
+}
+.stuff{
+    background-color: rgba(13, 150, 165, 0.92);
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 12pt;
 }
