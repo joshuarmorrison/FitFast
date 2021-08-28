@@ -18,12 +18,12 @@ document.getElementById("protein").innerText=automaticUpgrades.proteinshake.quan
 document.getElementById("steak").innerText=automaticUpgrades.steak.quantity.toString()
 }
 function buyChicken(){
-    if(steps >= 50){
+    if(steps >= clickUpgrades.chicken.price){
         clickUpgrades.chicken.quantity++
     steps -= clickUpgrades.chicken.price
     globalmultiplier += clickUpgrades.chicken.multiplier
     }
-    //clickUpgrades.chicken.price *= 2
+    clickUpgrades.chicken.price *= 2
     draw()
     drawInventory()
 }
