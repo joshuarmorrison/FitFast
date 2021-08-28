@@ -28,39 +28,39 @@ function buyChicken(){
     drawInventory()
 }
 function buySalmon(){
-    if(steps >= 150){
+    if(steps >= clickUpgrades.salmon.price){
         clickUpgrades.salmon.quantity++
     steps-=clickUpgrades.salmon.price
     globalmultiplier += clickUpgrades.salmon.multiplier
     }
-    // clickUpgrades.salmon.price *= 2
+     clickUpgrades.salmon.price *= 2
     draw()
     drawInventory()
 }
 function buyProtein(){
-    if(steps >= 400){
+    if(steps >= automaticUpgrades.proteinshake.price){
         automaticUpgrades.proteinshake.quantity++
     steps-=automaticUpgrades.proteinshake.price
     globalmultiplier += automaticUpgrades.proteinshake.multiplier
     }
-    // automaticUpgrades.proteinshake.price *= 3
+     automaticUpgrades.proteinshake.price *= 2
     draw()
     drawInventory()
 }
 function buySteak(){
-    if(steps >= 2500){
+    if(steps >= automaticUpgrades.steak.price){
         automaticUpgrades.steak.quantity++
     steps-=automaticUpgrades.steak.price
     globalmultiplier += automaticUpgrades.steak.multiplier
     }
-    //automaticUpgrades.steak.price *= 5
+    automaticUpgrades.steak.price *= 3
     draw()
     drawInventory()
 }
 
 let clickUpgrades = {
     chicken: {
-      price: 50,
+      price: 25,
       quantity: 0,
       multiplier: 5
     },
