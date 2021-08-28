@@ -19,7 +19,7 @@ document.getElementById("steak").innerText=automaticUpgrades.steak.quantity.toSt
 }
 function buyChicken(){
     if(steps <50){
-        return ("Not enough steps")
+        return ("Take More Steps")
     }
     clickUpgrades.chicken.quantity++
     steps -= clickUpgrades.chicken.price
@@ -29,7 +29,7 @@ function buyChicken(){
 }
 function buySalmon(){
     if(steps <100){
-        return ("Not enough steps")
+        return ("Take More Steps")
     }
     clickUpgrades.salmon.quantity++
     steps-=clickUpgrades.salmon.price
@@ -38,7 +38,7 @@ function buySalmon(){
     drawInventory()
 }
 function buyProtein(){
-    if(steps <150){
+    if(steps <400){
         return ("Not enough steps")
     }
     automaticUpgrades.proteinshake.quantity++
@@ -48,8 +48,8 @@ function buyProtein(){
     drawInventory()
 }
 function buySteak(){
-    if(steps <1000){
-        return ("Not enough steps")
+    if(steps <2500){
+        return ("Take More Steps")
     }
     automaticUpgrades.steak.quantity++
     steps-=automaticUpgrades.steak.price
@@ -77,12 +77,12 @@ let clickUpgrades = {
     proteinshake: {
         price: 400,
         quantity: 0,
-        multiplier: 30
+        multiplier: 15
     },
     steak: {
         price: 2500,
         quantity: 0,
-        multiplier: 50
+        multiplier: 30
   }
   }
   function collectAutomaticUpgrades(){
@@ -90,6 +90,6 @@ let clickUpgrades = {
       steps += (shake.quantity*shake.multiplier)
       let steak= automaticUpgrades.steak
       steps += (steak.quantity*steak.multiplier)
-
   }
   setInterval( collectAutomaticUpgrades, 3000);
+  
