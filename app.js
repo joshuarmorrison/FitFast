@@ -23,7 +23,7 @@ function buyChicken(){
     steps -= clickUpgrades.chicken.price
     globalmultiplier += clickUpgrades.chicken.multiplier
     }
-    clickUpgrades.chicken.price *= 2
+    
     draw()
     drawInventory()
 }
