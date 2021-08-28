@@ -65,7 +65,7 @@ let clickUpgrades = {
       multiplier: 5
     },
     salmon: {
-        price: 150,
+        price: 75,
         quantity: 0,
         multiplier: 8
     },
@@ -75,12 +75,12 @@ let clickUpgrades = {
   
   let automaticUpgrades = {
     proteinshake: {
-        price: 400,
+        price: 200,
         quantity: 0,
         multiplier: 15
     },
     steak: {
-        price: 2500,
+        price: 1500,
         quantity: 0,
         multiplier: 30
   }
