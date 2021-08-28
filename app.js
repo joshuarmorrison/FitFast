@@ -33,7 +33,7 @@ function buySalmon(){
     steps-=clickUpgrades.salmon.price
     globalmultiplier += clickUpgrades.salmon.multiplier
     }
-    // clickUpgrades.salmon.price *= 4
+    // clickUpgrades.salmon.price *= 2
     draw()
     drawInventory()
 }
@@ -43,7 +43,7 @@ function buyProtein(){
     steps-=automaticUpgrades.proteinshake.price
     globalmultiplier += automaticUpgrades.proteinshake.multiplier
     }
-    // automaticUpgrades.proteinshake.price *= 8
+    // automaticUpgrades.proteinshake.price *= 3
     draw()
     drawInventory()
 }
@@ -53,7 +53,7 @@ function buySteak(){
     steps-=automaticUpgrades.steak.price
     globalmultiplier += automaticUpgrades.steak.multiplier
     }
-    //automaticUpgrades.steak.price *= 12
+    //automaticUpgrades.steak.price *= 5
     draw()
     drawInventory()
 }
